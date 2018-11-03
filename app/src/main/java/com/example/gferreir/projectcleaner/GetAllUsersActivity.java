@@ -22,7 +22,7 @@ public class GetAllUsersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inicio);
 
-        listView = (TextView) findViewById(R.id.txtSala);
+        listView = (TextView) findViewById(R.id.txtSalaInsere);
 
         databaseHelper = new DatabaseHelper(this);
 

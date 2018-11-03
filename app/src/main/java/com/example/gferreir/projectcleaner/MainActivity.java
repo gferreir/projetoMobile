@@ -10,8 +10,26 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnStore, btnGetall;
-    private EditText etname, ethobby;
+
+    // botões referente ao layout inicio.xml
+    private Button btnInserirInicio, btnConsultInicio;
+
+    // textos e botões referente ao layout activity_main.xml
+    private EditText txtSalaInsere, txtFuncionarioInsere, txtTipoLimpezaInsere, txtProdutosInsere;
+    private Button btnGravarInsere, btnVoltarInsere;
+
+    // texto e botão referente ao layout busca.xml
+    private EditText txtConsultSala;
+    private Button btnBuscaConsult;
+
+    // textos e botões referente ao layout mosta_busca.xml
+    private EditText txtSalaBusca, txtFuncBusca, txtTipoLimpBusca, txtProdBusca;
+    private Button btnDeletaBusca, btnEditaBusca, btnVoltaBusca;
+
+    // textos e botões referente ao layout edicao.xml
+    private EditText txtSalaEdicao, txtFuncEdicao, txtTipoEdicao, txtProdEdicao;
+    private Button btnGravaEdicao, btnVoltaEdicao;
+
     private DatabaseHelper databaseHelper;
 
     @Override

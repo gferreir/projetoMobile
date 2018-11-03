@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnVoltarGravar"
+        android:id="@+id/btnVoltarInsere"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -19,11 +19,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGravar"
+        app:layout_constraintTop_toBottomOf="@+id/btnGravarInsere"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnGravar"
+        android:id="@+id/btnGravarInsere"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -33,10 +33,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProdutos" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProdutosInsere" />
 
     <EditText
-        android:id="@+id/txtSala"
+        android:id="@+id/txtSalaInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtFuncionario"
+        android:id="@+id/txtFuncionarioInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -62,10 +62,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSala" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSalaInsere" />
 
     <EditText
-        android:id="@+id/txtTipoLimpeza"
+        android:id="@+id/txtTipoLimpezaInsere"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
@@ -77,10 +77,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFuncionarioInsere" />
 
     <EditText
-        android:id="@+id/txtProdutos"
+        android:id="@+id/txtProdutosInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -92,6 +92,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpeza" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpezaInsere" />
 
 </android.support.constraint.ConstraintLayout>

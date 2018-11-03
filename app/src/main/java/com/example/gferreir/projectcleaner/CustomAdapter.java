@@ -45,10 +45,10 @@ public class CustomAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.inicio, null, true);
 
-            holder.sala = (TextView) convertView.findViewById(R.id.txtSala);
-            holder.funcionario = (TextView) convertView.findViewById(R.id.txtFuncionario);
-            holder.tipo = (TextView) convertView.findViewById(R.id.txtTipoLimpeza);
-            holder.produto = (TextView) convertView.findViewById(R.id.txtProdutos);
+            holder.sala = (TextView) convertView.findViewById(R.id.txtSalaInsere);
+            holder.funcionario = (TextView) convertView.findViewById(R.id.txtFuncionarioInsere);
+            holder.tipo = (TextView) convertView.findViewById(R.id.txtTipoLimpezaInsere);
+            holder.produto = (TextView) convertView.findViewById(R.id.txtProdutosInsere);
 
             convertView.setTag(holder);
         }else {
