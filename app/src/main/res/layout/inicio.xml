@@ -6,19 +6,19 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnInserirInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="39dp"
         android:layout_marginEnd="65dp"
         android:layout_marginStart="65dp"
         android:text="inserir"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/btnConsultInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnConsultInicio"
         android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -37,7 +37,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/btnInserirInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

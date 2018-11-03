@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp">
 
+    <Button
+        android:id="@+id/btnVoltarEdicao"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/txtSala2"
         android:layout_width="wrap_content"
@@ -67,13 +78,13 @@
         android:id="@+id/btnGravar2"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="28dp"
         android:text="Gravar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarEdicao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSala2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.043" />
 </android.support.constraint.ConstraintLayout>
