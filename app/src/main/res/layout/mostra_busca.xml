@@ -8,98 +8,86 @@
 
     <Button
         android:id="@+id/btnVoltaBusca"
-        android:layout_width="241dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginStart="71dp"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txtTipoLimpBusca"
+    <Button
+        android:id="@+id/btnDeletaBusca"
         android:layout_width="0dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="68dp"
-        android:text="Tipo de limpeza"
-        app:layout_constraintBottom_toTopOf="@+id/txtProdBusca"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="70dp"
+        android:text="deletar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditaBusca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="71dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:text="editar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFuncBusca" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDeletaBusca" />
 
-    <TextView
-        android:id="@+id/txtProdBusca"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="144dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="68dp"
-        android:text="Produto utilizado"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltaBusca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpBusca" />
-
-    <TextView
+    <EditText
         android:id="@+id/txtSalaBusca"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="Sala"
-        app:layout_constraintBottom_toTopOf="@+id/txtFuncBusca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtFuncBusca"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="68dp"
-        android:text="Funcionario"
-        app:layout_constraintBottom_toTopOf="@+id/txtTipoLimpBusca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Funcionário"
+        app:layout_constraintStart_toStartOf="@+id/txtSalaBusca"
         app:layout_constraintTop_toBottomOf="@+id/txtSalaBusca" />
 
-    <Button
-        android:id="@+id/btnDeletaBusca"
-        android:layout_width="243dp"
+    <EditText
+        android:id="@+id/txtTipoLimpBusca"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="deletar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProdBusca" />
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Tipo de limpeza"
+        app:layout_constraintStart_toStartOf="@+id/txtFuncBusca"
+        app:layout_constraintTop_toBottomOf="@+id/txtFuncBusca" />
 
-    <Button
-        android:id="@+id/btnEditaBusca"
-        android:layout_width="241dp"
+    <EditText
+        android:id="@+id/txtProdBusca"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="editar"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltaBusca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDeletaBusca"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeletaBusca"
+        app:layout_constraintStart_toStartOf="@+id/txtTipoLimpBusca"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpBusca"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

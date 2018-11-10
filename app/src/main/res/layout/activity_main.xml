@@ -4,94 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/btnVoltarInsere"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:text="voltar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGravarInsere"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="423dp" />
 
     <Button
         android:id="@+id/btnGravarInsere"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:text="Gravar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProdutosInsere" />
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="359dp" />
 
     <EditText
         android:id="@+id/txtSalaInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sala"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <EditText
         android:id="@+id/txtFuncionarioInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Funcionário"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSalaInsere" />
-
-    <EditText
-        android:id="@+id/txtTipoLimpezaInsere"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tipo de limpeza"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFuncionarioInsere" />
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="118dp" />
 
     <EditText
         android:id="@+id/txtProdutosInsere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Produtos utilizados"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpezaInsere" />
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <Spinner
+        android:id="@+id/txtTipoLimpezaInsere"
+        android:layout_width="219dp"
+        android:layout_height="45dp"
+        android:entries="@array/tipoLimpaza"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="202dp" />
 
 </android.support.constraint.ConstraintLayout>

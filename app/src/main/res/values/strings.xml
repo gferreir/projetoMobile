@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProjectCleaner</string>
+    <string-array name="tipoLimpaza">
+        <item>Leve</item>
+        <item>Média</item>
+        <item>Pesada</item>
+    </string-array>
+    <string name="erro_autenticacao">Usuário e/ou senha inválida</string>
 </resources>
