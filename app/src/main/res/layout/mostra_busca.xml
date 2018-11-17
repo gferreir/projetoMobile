@@ -6,88 +6,10 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp">
 
-    <Button
-        android:id="@+id/btnVoltaBusca"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginStart="71dp"
-        android:text="Voltar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnDeletaBusca"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginStart="70dp"
-        android:text="deletar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnEditaBusca"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="71dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="16dp"
-        android:text="editar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDeletaBusca" />
-
-    <EditText
-        android:id="@+id/txtSalaBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Sala"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtFuncBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Funcionário"
-        app:layout_constraintStart_toStartOf="@+id/txtSalaBusca"
-        app:layout_constraintTop_toBottomOf="@+id/txtSalaBusca" />
-
-    <EditText
-        android:id="@+id/txtTipoLimpBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tipo de limpeza"
-        app:layout_constraintStart_toStartOf="@+id/txtFuncBusca"
-        app:layout_constraintTop_toBottomOf="@+id/txtFuncBusca" />
-
-    <EditText
-        android:id="@+id/txtProdBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/btnDeletaBusca"
-        app:layout_constraintStart_toStartOf="@+id/txtTipoLimpBusca"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpBusca"
-        app:layout_constraintVertical_bias="0.0" />
-
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 </android.support.constraint.ConstraintLayout>

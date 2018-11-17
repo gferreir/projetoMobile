@@ -4,73 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="25dp">
 
-    <Button
-        android:id="@+id/btnVoltaEdicao"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="voltar"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/txtTipoLimpezaEdita"
+        android:layout_width="219dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="52dp"
+        android:entries="@array/tipoLimpaza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFuncionarioEdita" />
 
     <EditText
-        android:id="@+id/txtSalaEdicao"
+        android:id="@+id/txtSalaEdita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
+        android:hint="Sala"
         android:inputType="textPersonName"
-        android:text="Sala"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtFuncEdicao"
+        android:id="@+id/txtFuncionarioEdita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
+        android:hint="Funcionário"
         android:inputType="textPersonName"
-        android:text="Funcionário"
-        app:layout_constraintStart_toStartOf="@+id/txtSalaEdicao"
-        app:layout_constraintTop_toBottomOf="@+id/txtSalaEdicao" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalaEdita" />
 
-    <EditText
-        android:id="@+id/txtTipoEdicao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tipo de limpeza"
-        app:layout_constraintStart_toStartOf="@+id/txtFuncEdicao"
-        app:layout_constraintTop_toBottomOf="@+id/txtFuncEdicao" />
-
-    <EditText
-        android:id="@+id/txtProdEdicao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Produtos utilizados"
-        app:layout_constraintBottom_toTopOf="@+id/btnGravaEdicao"
-        app:layout_constraintStart_toStartOf="@+id/txtTipoEdicao"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoEdicao"
-        app:layout_constraintVertical_bias="0.0" />
+    <Spinner
+        android:id="@+id/txtProdutoEdita"
+        android:layout_width="219dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="52dp"
+        android:entries="@array/tipoProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpezaEdita" />
 
     <Button
-        android:id="@+id/btnGravaEdicao"
-        android:layout_width="217dp"
+        android:id="@+id/button4"
+        android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Gravar"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltaEdicao"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:text="gravar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProdutoEdita" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sala" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtFuncionarioEdita"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@drawable/empregado" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtTipoLimpezaEdita"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:srcCompat="@drawable/tipo" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtProdutoEdita"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:srcCompat="@drawable/produto" />
 </android.support.constraint.ConstraintLayout>
