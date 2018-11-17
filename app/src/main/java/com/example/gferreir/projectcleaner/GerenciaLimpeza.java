@@ -25,6 +25,12 @@ public class GerenciaLimpeza {
         dba.execComandoSql(sql);
     }
 
+    public void excluirLimpeza(int id){
+        DBAdapter dba = new DBAdapter(context);
+        String sql = "DELETE FROM limpeza WHERE id=" + id;
+        dba.execComandoSql(sql);
+    }
+
     public List<Limpeza> retornaLimpezas() {
         return retornaLimpezas(null);
     }

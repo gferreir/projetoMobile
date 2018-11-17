@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -17,9 +19,9 @@ import java.util.List;
 
 public class BuscaActivity extends AppCompatActivity{
 
-    ListView listView;
-    String sala, funcionario, tipo, produto;
-    int idd;
+    static ListView listView;
+    static String sala, funcionario, tipo, produto;
+    static int idd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,24 @@ public class BuscaActivity extends AppCompatActivity{
         setContentView(R.layout.mostra_busca);
         listView = (ListView)findViewById(R.id.listView);
         mostraLista();
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final Context context = view.getContext();
+                final Limpeza limpeza = (Limpeza)listView.getItemAtPosition(position);
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Excluir").setMessage("Excluir registro?").setPositiveButton("Excluir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        new GerenciaLimpeza(getBaseContext()).excluirLimpeza(limpeza.id);
+                        mostraLista();
+                        Toast.makeText(context,"Exclusão realizada", Toast.LENGTH_SHORT).show();
+                    }
+                }).setNegativeButton("Cancelar",null).create().show();
+                return true;
+            }
+        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -37,7 +57,8 @@ public class BuscaActivity extends AppCompatActivity{
                 tipo = limpeza.tipoLimpeza;
                 produto = limpeza.produto;
                 idd = limpeza.id;
-                startActivity(new Intent(getBaseContext(), EdicaoActivity.class));
+                Intent coisinha = new Intent(BuscaActivity.this, EdicaoActivity.class);
+                startActivity(coisinha);
             }
         });
     }
