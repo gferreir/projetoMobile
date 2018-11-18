@@ -10,10 +10,13 @@
         android:id="@+id/txtTipoLimpezaEdita"
         android:layout_width="219dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:entries="@array/tipoLimpaza"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/txtFuncionarioEdita" />
 
     <EditText
@@ -35,22 +38,28 @@
         android:id="@+id/txtFuncionarioEdita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Funcionário"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/txtSalaEdita" />
 
     <Spinner
         android:id="@+id/txtProdutoEdita"
         android:layout_width="219dp"
         android:layout_height="42dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
         android:entries="@array/tipoProduto"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/txtTipoLimpezaEdita" />
 
     <Button
@@ -80,11 +89,8 @@
         android:id="@+id/imageView10"
         android:layout_width="50dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toStartOf="@+id/txtFuncionarioEdita"
-        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/empregado" />
@@ -93,11 +99,8 @@
         android:id="@+id/imageView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/txtTipoLimpezaEdita"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:srcCompat="@drawable/tipo" />
@@ -106,11 +109,8 @@
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/txtProdutoEdita"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:srcCompat="@drawable/produto" />
