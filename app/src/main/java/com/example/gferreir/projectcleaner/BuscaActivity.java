@@ -46,8 +46,8 @@ public class BuscaActivity extends AppCompatActivity{
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         new GerenciaLimpeza(getBaseContext()).excluirLimpeza(limpeza.id);
-                        mostraLista();
                         Toast.makeText(context,"Exclusão realizada", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 }).setNegativeButton("Cancelar",null).create().show();
                 return true;
