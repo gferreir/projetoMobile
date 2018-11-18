@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
+    // declaração do nome do banco de dados e versão
     static final String database_name = "bancoLimpeza.db";
     static final int database_version = 1;
 
@@ -13,6 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context,database_name,null,database_version);
     }
 
+    // método responsável pela criação da tabela onde ficará registrado as informações
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE limpeza(id integer primary key autoincrement, sala text not null," +

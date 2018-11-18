@@ -1,12 +1,8 @@
 package com.example.gferreir.projectcleaner;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -16,12 +12,19 @@ import java.util.List;
 
 public class EdicaoActivity extends AppCompatActivity{
 
+    // declaração das variáveis
     BuscaActivity busca;
     EditText txtSalaEdita, txtFuncionarioEdita;
     Spinner txtTipoLimpezaEdita, txtProdutoEdita;
 
+    // intanciação da classe Limpeza
     Limpeza limpeza;
 
+    // quando essa classe for chamada
+    // onCreate responsável por exibir a tela edicao_activity
+    // esta tela tem como função fazer a edição de um registro
+    // campos txtSalaEdita, txtFuncionarioEdita, txtTipoLimpezaEdita e txtProdutoEdita
+    // estão sendo declarados
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +34,12 @@ public class EdicaoActivity extends AppCompatActivity{
         txtTipoLimpezaEdita = (Spinner)findViewById(R.id.txtTipoLimpezaEdita);
         txtProdutoEdita = (Spinner)findViewById(R.id.txtProdutoEdita);
 
+        // recebendo os valores dos atributos vindo da classe BuscaActivity
+        // settando os valores recebidos nos respectivos campos
         txtSalaEdita.setText(busca.sala);
         txtFuncionarioEdita.setText(busca.funcionario);
 
+        // condicional necessária para settar os valores do spinner tipoLimpeza
         if(busca.tipo.equals("Leve"))
             txtTipoLimpezaEdita.setSelection(0);
         if(busca.tipo.equals("Média"))
@@ -41,6 +47,7 @@ public class EdicaoActivity extends AppCompatActivity{
         if(busca.tipo.equals("Pesada"))
             txtTipoLimpezaEdita.setSelection(2);
 
+        // condicional necessária para settar os valores do spinner tipoProduto
         if(busca.produto.equals("Básicos"))
             txtProdutoEdita.setSelection(0);
         if(busca.produto.equals("Compostos"))
@@ -49,6 +56,7 @@ public class EdicaoActivity extends AppCompatActivity{
             txtProdutoEdita.setSelection(2);
     }
 
+    // método responsável por mostrar e atualizar a List View (refresh na página)
     public void mostraLista(){
         List<Limpeza> listinha = new GerenciaLimpeza(this).retornaLimpezas();
         if(listinha.size() == 0)
@@ -59,6 +67,11 @@ public class EdicaoActivity extends AppCompatActivity{
         busca.listView.setAdapter(limpezinha);
     }
 
+    // método responsável por salvar a edição
+    // pega os novos valores dos campos
+    // chama método salvaLimpeza
+    // chama método mostraLista()
+    // chama método finish() reponsável por voltar para a tela anterior
     public void salvarEdicao(View view){
         String sala = txtSalaEdita.getText().toString();
         String funcionario = txtFuncionarioEdita.getText().toString();

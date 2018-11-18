@@ -2,18 +2,18 @@ package com.example.gferreir.projectcleaner;
 
 import android.content.Context;
 import android.database.Cursor;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciaLimpeza {
 
+    // declaração de variáveis
     private Context context;
-
     public GerenciaLimpeza(Context context) {
         this.context = context;
     }
 
+    // método responsável por salvar o registro no banco de dados
     public void salvarLimpeza(Limpeza limpeza) {
         DBAdapter dba = new DBAdapter(context);
         String sql = limpeza.id == 0 ? "INSERT INTO limpeza(sala,funcionario,tipo,produto)" +
@@ -25,6 +25,7 @@ public class GerenciaLimpeza {
         dba.execComandoSql(sql);
     }
 
+    // método responsável por deletar um registro no banco de dados
     public void excluirLimpeza(int id){
         DBAdapter dba = new DBAdapter(context);
         String sql = "DELETE FROM limpeza WHERE id=" + id;
@@ -35,6 +36,7 @@ public class GerenciaLimpeza {
         return retornaLimpezas(null);
     }
 
+    // método responsável por retornar o registro salvo no bando de dados
     public List<Limpeza> retornaLimpezas(String rasqe) {
         String sql = "SELECT id,sala,funcionario,tipo,produto FROM limpeza";
 
