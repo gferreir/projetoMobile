@@ -5,7 +5,7 @@ Cleaner é um aplicativo mobile Android desenvolvido em Java.
 
 ## Premissa
 
-Partindo da idéia de um ambiente empresarial ou de uma instituição de ensino onde se faz necessário a limpeza diária e constante de seus ambientes. Geralmente essas instituições possuem vários ambientes e várias equipes de limpeza trabalham para poder cobrir todos os ambientes. Considerando esses fatos, o aplicativo cumpre o papel de registrar a limpeza de cada ambiente.
+Partindo da ideia de um ambiente empresarial ou de uma instituição de ensino, a limpeza diária e constante de seus ambientes de faz necessária. Geralmente essas instituições possuem vários ambientes e várias equipes de limpeza trabalham para poder cobrir todos os ambientes. Considerando esses fatos, o aplicativo cumpre o papel de registrar a limpeza de cada ambiente.
 
 ## Sobre o aplicativo
 
@@ -16,7 +16,7 @@ Com o registro o funcionário preencherá as seguintes informações:
 - Ambiente que foi limpo
 - Funcionário que relizou o serviço
 - Tipo de limpeza que realizou no ambiente
-- Quais tipo de produto que Utilizou
+- Quais tipo de produto que utilizou
 
 ## Workflow do aplicativo
 
