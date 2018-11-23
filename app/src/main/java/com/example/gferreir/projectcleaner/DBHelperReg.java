@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelperReg extends SQLiteOpenHelper {
 
     static final int database_version = 1;
-    static final String database_nome = "registroUsuario.db";
+    static final String database_nome = "registroUsuario1.db";
 
     public DBHelperReg(Context context){
         super(context,database_nome,null,database_version);
@@ -18,9 +18,11 @@ public class DBHelperReg extends SQLiteOpenHelper {
     // método responsável pela criação da tabela onde ficará registrado as informações
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String str = "CREATE TABLE Utilizador(id interger primary key autoincrement, " +
+        db.execSQL("CREATE TABLE Utilizador(id integer primary key autoincrement, " +
+                "username text not null, password text not null);");
+        /*String str = "CREATE TABLE Utilizador(id interger primary key autoincrement, " +
                 "username text not null, password text not null);";
-        db.execSQL(str);
+        db.execSQL(str);*/
     }
 
     @Override

@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable {
 
-    String nome, senha, confirmarSenha;
+    String nome, senha;
+    //String confirmarSenha;
     int id;
 
     public Usuario(int id, String nome,String senha){
@@ -16,7 +17,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString(){
-        return this.senha;
+        return this.nome;
     }
 
     /*

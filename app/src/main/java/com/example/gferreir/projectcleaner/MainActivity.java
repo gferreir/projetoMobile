@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else{
-                Toast.makeText(MainActivity.this, "Login errado, tente novamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Login inexistente, tente novamente", Toast.LENGTH_SHORT).show();
 
             }
 

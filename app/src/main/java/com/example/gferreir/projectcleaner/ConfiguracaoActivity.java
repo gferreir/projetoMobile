@@ -29,7 +29,7 @@ public class ConfiguracaoActivity extends AppCompatActivity {
                 final Context context = view.getContext();
                 final Usuario usuario= (Usuario) listView.getItemAtPosition(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Excluir").setMessage("Excluir registro?").setPositiveButton("Excluir", new DialogInterface.OnClickListener() {
+                builder.setTitle("Excluir").setMessage("Excluir usuário?").setPositiveButton("Excluir", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         new GerenciaConfig(getBaseContext()).excluirUser(usuario.id);
