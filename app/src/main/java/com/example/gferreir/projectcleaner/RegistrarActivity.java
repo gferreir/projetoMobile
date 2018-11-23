@@ -12,8 +12,8 @@ public class RegistrarActivity extends AppCompatActivity {
 
     EditText edtNome,edtSenha,edtConfirmarSenha;
     Button btnCadastrar,btnCancelar;
-
     DBHelperReg db;
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class RegistrarActivity extends AppCompatActivity {
         btnCadastrar = (Button) findViewById(R.id.btnCadastrarConf);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
 
-
+        /*
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +43,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 } else if (senha.equals("") || confirmar.equals("")) {
                     Toast.makeText(RegistrarActivity.this, "Senha vazia, tente novamente", Toast.LENGTH_SHORT).show();
                 } else if (!senha.equals(confirmar)) {
-                    Toast.makeText(RegistrarActivity.this, "As senhas não correspondem,tente novamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrarActivity.this, "As senhas não correspondem, tente novamente", Toast.LENGTH_SHORT).show();
                 } else {
                     long res = db.CriarUtilizador(username, senha);
                     if (res > 0) {
@@ -55,7 +55,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,4 +64,17 @@ public class RegistrarActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void salvaUser(View view){
+        int id = usuario == null ? 0 : usuario.id;
+        String user = edtNome.getText().toString();
+        String pwd = edtSenha.getText().toString();
+
+        usuario = new Usuario(id,user,pwd);
+        new GerenciaConfig(this).salvaUser(usuario);
+        Toast.makeText(this, "Salvo com sucesso!", Toast.LENGTH_SHORT).show();
+
+        finish();
+    }
+
 }

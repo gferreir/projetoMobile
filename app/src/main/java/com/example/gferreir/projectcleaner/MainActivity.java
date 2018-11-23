@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // método responsável por fazer a verificação dos dados preenchidos nos campos
-    // se a condição de o usuário for: admin e a senha: 123
     // a classe InicioActivity é chamada
-    // caso contrário aparecerá uma menssagem de erro
 
     public void entrarOnClick(View view){
 

@@ -27,4 +27,8 @@ public class InicioActivity extends AppCompatActivity{
         startActivity(new Intent(this, BuscaActivity.class));
     }
 
+    public void btnConfigOnClick(View view){
+        startActivity(new Intent(this, LoginConfigActivity.class));
+    }
+
 }

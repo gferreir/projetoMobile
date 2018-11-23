@@ -18,10 +18,16 @@ public class DBHelperReg extends SQLiteOpenHelper {
     // método responsável pela criação da tabela onde ficará registrado as informações
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String str = "CREATE TABLE Utilizador(username TEXT PRIMARY KEY, password TEXT);";
+        String str = "CREATE TABLE Utilizador(id interger primary key autoincrement, " +
+                "username text not null, password text not null);";
         db.execSQL(str);
     }
 
+    @Override
+    public void onUpgrade(SQLiteDatabase db,int old_Version, int new_Version){
+    }
+
+    /*
     @Override
     public void onUpgrade(SQLiteDatabase db,int old_Version, int new_Version){
         db.execSQL("DROP TABLE IF EXISTS Utilizador;");
@@ -38,7 +44,7 @@ public class DBHelperReg extends SQLiteOpenHelper {
 
         return result;
     }
-
+    */
     public String ValidarLogin(String username, String password) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM Utilizador WHERE username=? AND password =?", new String[]{username, password});
