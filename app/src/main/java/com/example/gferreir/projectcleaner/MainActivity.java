@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
     DBHelperReg db;
 
+<<<<<<< HEAD
+=======
+    public static String user;
+
+>>>>>>> 6f2fc543a3fd4c5495fc84628947b3b987fe972a
     // método onCreate responsável por fazer todas as ações da tela enquanto ativa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         String username = usuario.getText().toString();
         String password = senha.getText().toString();
 
+<<<<<<< HEAD
         if(username.equals("")) {
             Toast.makeText(MainActivity.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
         }
@@ -57,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Senha não inserida, tente novamente", Toast.LENGTH_SHORT).show();
 
         }
+=======
+        user = username;
+
+        if(username.equals("")) {
+            Toast.makeText(MainActivity.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
+        }
+        else if(password.equals("")){
+            Toast.makeText(MainActivity.this, "Senha não inserida, tente novamente", Toast.LENGTH_SHORT).show();
+
+        }
+>>>>>>> 6f2fc543a3fd4c5495fc84628947b3b987fe972a
         else {
 
             String res = db.ValidarLogin(username,password);
