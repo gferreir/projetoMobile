@@ -20,6 +20,9 @@
         <activity android:name=".GravaActivity"/>
         <activity android:name=".BuscaActivity"/>
         <activity android:name=".EdicaoActivity"/>
+        <activity android:name=".RegistrarActivity"/>
+        <activity android:name=".ConfiguracaoActivity"/>
+        <activity android:name=".LoginConfigActivity"/>
     </application>
 
 </manifest>
