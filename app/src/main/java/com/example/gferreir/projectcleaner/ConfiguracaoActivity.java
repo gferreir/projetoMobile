@@ -2,6 +2,7 @@ package com.example.gferreir.projectcleaner;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,8 @@ public class ConfiguracaoActivity extends AppCompatActivity {
 
     static ListView listView;
 
+    MainActivity m;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +28,7 @@ public class ConfiguracaoActivity extends AppCompatActivity {
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 final Context context = view.getContext();
                 final Usuario usuario= (Usuario) listView.getItemAtPosition(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -34,6 +37,11 @@ public class ConfiguracaoActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         new GerenciaConfig(getBaseContext()).excluirUser(usuario.id);
                         Toast.makeText(context,"Exclusão realizada", Toast.LENGTH_SHORT).show();
+                        if(m.user.equals(((Usuario) listView.getItemAtPosition(position)).nome)){
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                        }
                         finish();
                     }
                 }).setNegativeButton("Cancelar",null).create().show();

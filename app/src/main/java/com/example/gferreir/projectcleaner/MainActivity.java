@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     DBHelperReg db;
 
+    public static String user;
+
     // método onCreate responsável por fazer todas as ações da tela enquanto ativa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         String username = usuario.getText().toString();
         String password = senha.getText().toString();
+
+        user = username;
 
         if(username.equals("")) {
             Toast.makeText(MainActivity.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
