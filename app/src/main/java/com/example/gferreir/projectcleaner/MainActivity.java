@@ -18,10 +18,15 @@ public class MainActivity extends AppCompatActivity {
     DBHelperReg db;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public static String user;
 
 >>>>>>> 6f2fc543a3fd4c5495fc84628947b3b987fe972a
+=======
+    public static String user;
+
+>>>>>>> 8101425934e93d4b79199712865b23f69b6a9dd2
     // método onCreate responsável por fazer todas as ações da tela enquanto ativa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         String password = senha.getText().toString();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(username.equals("")) {
             Toast.makeText(MainActivity.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
         }
@@ -64,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 =======
+=======
+>>>>>>> 8101425934e93d4b79199712865b23f69b6a9dd2
         user = username;
 
         if(username.equals("")) {
