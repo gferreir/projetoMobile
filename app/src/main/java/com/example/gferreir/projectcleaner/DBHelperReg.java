@@ -20,33 +20,12 @@ public class DBHelperReg extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE Utilizador(id integer primary key autoincrement, " +
                 "username text not null, password text not null);");
-        /*String str = "CREATE TABLE Utilizador(id interger primary key autoincrement, " +
-                "username text not null, password text not null);";
-        db.execSQL(str);*/
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db,int old_Version, int new_Version){
     }
 
-    /*
-    @Override
-    public void onUpgrade(SQLiteDatabase db,int old_Version, int new_Version){
-        db.execSQL("DROP TABLE IF EXISTS Utilizador;");
-        onCreate(db);
-    }
-
-    public long CriarUtilizador(String username, String password){
-        SQLiteDatabase db = getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put("username",username);
-        cv.put("password",password);
-
-        long result = db.insert("Utilizador",null,cv);
-
-        return result;
-    }
-    */
     public String ValidarLogin(String username, String password) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM Utilizador WHERE username=? AND password =?", new String[]{username, password});

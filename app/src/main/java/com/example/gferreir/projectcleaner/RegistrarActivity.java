@@ -25,37 +25,7 @@ public class RegistrarActivity extends AppCompatActivity {
         edtNome=(EditText) findViewById(R.id.edtNome);
         edtSenha =(EditText) findViewById(R.id.edtSenha);
         edtConfirmarSenha=(EditText) findViewById(R.id.edtConfirmSenha);
-
-        btnCadastrar = (Button) findViewById(R.id.btnCadastrarConf);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
-
-        /*
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username = edtNome.getText().toString();
-                String senha = edtSenha.getText().toString();
-                String confirmar = edtConfirmarSenha.getText().toString();
-
-                if (username.equals("")) {
-                    Toast.makeText(RegistrarActivity.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
-
-                } else if (senha.equals("") || confirmar.equals("")) {
-                    Toast.makeText(RegistrarActivity.this, "Senha vazia, tente novamente", Toast.LENGTH_SHORT).show();
-                } else if (!senha.equals(confirmar)) {
-                    Toast.makeText(RegistrarActivity.this, "As senhas não correspondem, tente novamente", Toast.LENGTH_SHORT).show();
-                } else {
-                    long res = db.CriarUtilizador(username, senha);
-                    if (res > 0) {
-                        Toast.makeText(RegistrarActivity.this, "Cadastrado com sucesso", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegistrarActivity.this, MainActivity.class));
-                    } else {
-                        Toast.makeText(RegistrarActivity.this, "Cadastro invalido tente novamente", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-            }
-        });*/
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
