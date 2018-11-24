@@ -46,6 +46,8 @@ Com o registro o funcionário preencherá as seguintes informações:
 
 ![https://i.imgur.com/Y7O3AdW.png](https://i.imgur.com/Y7O3AdW.png)
 
+- No menu principal clicando em avançado você será direcionado para a tela de administração do sistema, onde você poderá excluir usuários cadastrados. Será necessário o usuário e senha do administrador. Que no caso é: *usuário:* **admin** | *senha:* **123**.
+
 ## Informações adicionais
 
 O código fonte está comentado para melhor entendimento.
