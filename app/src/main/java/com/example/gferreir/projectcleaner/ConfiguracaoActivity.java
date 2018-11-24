@@ -43,11 +43,8 @@ public class ConfiguracaoActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                         finish();
-
                     }
                 }).setNegativeButton("Cancelar",null).create().show();
-
-
                 return true;
             }
         });

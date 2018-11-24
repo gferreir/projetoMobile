@@ -9,6 +9,8 @@ Partindo da ideia de um ambiente empresarial ou de uma instituição de ensino, 
 
 ## Sobre o aplicativo
 
+O funcionário realizará o login no aplicativo caso tenha um *login* cadastrado, caso contrário fará o registro de um novo usuário com senha.
+
 O funcionário que for encarregado de fazer a limpeza de determinado ambiente preencherá os campos do aplicativo após o término da limpeza.
 
 Com o registro o funcionário preencherá as seguintes informações:
@@ -44,14 +46,9 @@ Com o registro o funcionário preencherá as seguintes informações:
 
 ![https://i.imgur.com/Y7O3AdW.png](https://i.imgur.com/Y7O3AdW.png)
 
+- No menu principal clicando em avançado você será direcionado para a tela de administração do sistema, onde você poderá excluir usuários cadastrados. Será necessário o usuário e senha do administrador. Que no caso é: *usuário:* **admin** | *senha:* **123**.
+
 ## Informações adicionais
-
-O login realizado no aplicativo é uma versão beta onde o usuário e senha já estão previamente cadastrados no código do aplicativo. Então é uma comparação simples de Strings.
-
-O usuário e senha padrão do aplicativo é:
-
-- admin
-- 123
 
 O código fonte está comentado para melhor entendimento.
 
